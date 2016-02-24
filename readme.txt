@@ -12,7 +12,28 @@ Add ProfilePress login, registration, password reset, edit profile, my profile a
 == Description ==
 ProfilePress extension for adding login, login/logout, registration, password reset, edit profile and my profile links to WordPress navigation menu
 
+== Installation ==
+
+Installing this plugin is just like any other WordPress plugin.
+Navigate to your WordPress “Plugins” page, inside of your WordPress dashboard, and follow these instructions:
+
+1. In the search field enter **WordPress Navigation Menu Links**. Click "Search Plugins", or hit Enter.
+1. Select **WordPress Navigation Menu Links** and click either "Details" or "Install Now".
+1. Once installed, click "Activate".
+
+== Frequently Asked Questions ==
+
+None
+
+== Screenshots ==
+
+None
+
 == Changelog ==
 
 = 1.0 =
 * the genesis
+
+== Upgrade Notice ==
+
+none
