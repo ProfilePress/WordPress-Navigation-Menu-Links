@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: ProfilePress Navigation Menu Links
+Plugin Name: WordPress Navigation Menu Links
 Plugin URI: http://profilepress.net
 Description: Add ProfilePress login, registration, password reset, edit profile, my profile and logout links to WordPress navigation menu.
 Version: 1.0
