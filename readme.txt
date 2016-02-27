@@ -1,4 +1,4 @@
-﻿=== WordPress Navigation Menu Links - Add Default WordPress and ProfilePress powered login, registration, password reset, logout, login/logout links to WordPress navigation menu. ===
+﻿=== Navigation Menu Links ===
 Contributors: Collizo4sky
 Donate link: http://profilepress.net/pricing/
 Tags: log in, login, logout, menu, nonce, sign-up, sign up, register, registration, link, links, wordpress menu, menu, navigation, navigation menu, wordpress navigation menu
@@ -12,13 +12,15 @@ Add login, registration, password reset, logout, login/logout links to WordPress
 == Description ==
 
 It makes adding login, login/logout, registration, password reset links to your WordPress navigation menu easy.
+Also, it supports the addition of [ProfilePress](http://profilepress.net/) edit profile form and front-end profile page links.
 
 > If you own **[ProfilePress PRO](http://profilepress.net)** — a plugin that makes building custom login, registration, password reset, edit profile forms and front-end user profile stupidly simple — you can as well use this plugin to add its front-end profile and edit profile page links to WordPress menu.
+>
 > **Note:** WordPress default login, registration and password reset links will automatically be overridden by their respective ProfilePress custom pages.
 >
 > [Get ProfilePress PRO](http://profilepress.net/pricing/) or try the [Lite Version](https://wordpress.org/plugins/ppress/).
 
-This is a rewritten fork of [Login Logout Menu](https://wordpress.org/support/view/plugin-reviews/baw-login-logout-menu) plugin with a better architected codebase.
+This is a rewritten fork of [Login Logout Menu](https://wordpress.org/plugins/baw-login-logout-menu/) plugin with a better architected codebase.
 
 == Installation ==
 
