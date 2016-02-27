@@ -73,13 +73,17 @@ class Backend {
 				</ul>
 			</div>
 
-			<p class="button-controls">
+			<div class="button-controls">
 			<span class="add-to-menu">
-				<input type="submit"<?php disabled( $nav_menu_selected_id,
-					0 ); ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e( 'Add to Menu' ); ?>" name="add-pp-links-menu-item" id="submit-pp-links"/>
+				<input type="submit"<?php disabled( $nav_menu_selected_id, 0 ); ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e( 'Add to Menu' ); ?>" name="add-pp-links-menu-item" id="submit-pp-links"/>
 				<span class="spinner"></span>
 			</span>
-			</p>
+
+				<div id="help-login-links"><br/><br/>
+					<p><strong>Do not change the value of the "URL" field.</strong></p>
+					<p><?php printf('Love this plugin? Check out <a href="%s" target="_blank">ProfilePress</a>, a shortcode based WordPress form builder that makes building custom login, registration, password reset forms stupidly simple with lots of other perks', 'http://profilepress.net/pricing/'); ?>.<p>
+				</div>
+			</div>
 
 		</div>
 		<?php
