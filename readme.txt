@@ -1,16 +1,24 @@
-﻿=== WordPress Navigation Menu Links - Add ProfilePress login, registration, password reset, edit profile, my profile and logout links to WordPress navigation menu. ===
+﻿=== WordPress Navigation Menu Links - Add Default WordPress and ProfilePress powered login, registration, password reset, logout, login/logout links to WordPress navigation menu. ===
 Contributors: Collizo4sky
 Donate link: http://profilepress.net/pricing/
-Tags: WordPress menu, menu, navigation, navigation menu, WordPress navigation menu
-Requires at least: 4.0
+Tags: log in, login, logout, menu, nonce, sign-up, sign up, register, registration, link, links, wordpress menu, menu, navigation, navigation menu, wordpress navigation menu
+Requires at least: 3.9
 Tested up to: 4.4.2
 Stable tag: 1.0
 License: GPL-2.0+
 
-Add ProfilePress login, registration, password reset, edit profile, my profile and logout links to WordPress navigation menu.
+Add login, registration, password reset, logout, login/logout links to WordPress menu.
 
 == Description ==
-ProfilePress extension for adding login, login/logout, registration, password reset, edit profile and my profile links to WordPress navigation menu
+
+It makes adding login, login/logout, registration, password reset links to your WordPress navigation menu easy.
+
+> If you own **[ProfilePress PRO](http://profilepress.net)** — a plugin that makes building custom login, registration, password reset, edit profile forms and front-end user profile stupidly simple — you can as well use this plugin to add its front-end profile and edit profile page links to WordPress menu.
+> **Note:** WordPress default login, registration and password reset links will automatically be overriden by their resepected ProfilePress custom pages.
+>
+> [Get ProfilePress PRO](http://profilepress.net/pricing/) or try the [Lite Version](https://wordpress.org/plugins/ppress/).
+
+This is a rewritten fork of [Login Logout Menu](https://wordpress.org/support/view/plugin-reviews/baw-login-logout-menu) plugin with a better architected codebase.
 
 == Installation ==
 
@@ -23,17 +31,13 @@ Navigate to your WordPress “Plugins” page, inside of your WordPress dashboar
 
 == Frequently Asked Questions ==
 
-None
+Have any question, shoot us a mail via support[at]profilepress.net
 
 == Screenshots ==
 
-None
+1. WordPress menu
 
 == Changelog ==
 
 = 1.0 =
 * the genesis
-
-== Upgrade Notice ==
-
-none
