@@ -22,6 +22,11 @@ Also, it supports the addition of [ProfilePress](http://profilepress.net/) edit 
 
 This is a rewritten fork of [Login Logout Menu](https://wordpress.org/plugins/baw-login-logout-menu/) plugin with a better architected codebase.
 
+
+## Contribution
+Plugin is open source on [GitHub](https://github.com/ProfilePress/WordPress-Navigation-Menu-Links). Issues and pull requests are welcome.
+
+
 == Installation ==
 
 Installing this plugin is just like any other WordPress plugin.
