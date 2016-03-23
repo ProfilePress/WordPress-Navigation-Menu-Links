@@ -63,12 +63,12 @@ class Frontend {
 					if ( is_user_logged_in() ) {
 						$item->title = '#pp-signup#';
 					} else {
-						$item->url = pp_registration_url();
+						$item->url = wp_registration_url();
 					}
 					$item = apply_filters( 'pp_nav_register_item', $item );
 					break;
 				case '#pp-myprofile#' :
-					if ( is_user_logged_in() ) {
+					if ( is_user_logged_in() && function_exists('pp_profile_url') ) {
 						$item->url = pp_profile_url();
 					} else {
 						$item->title = '#pp-myprofile#';
@@ -76,7 +76,7 @@ class Frontend {
 					$item = apply_filters( 'pp_nav_register_item', $item );
 					break;
 				case '#pp-editprofile#' :
-					if ( is_user_logged_in() ) {
+					if ( is_user_logged_in() && function_exists('pp_edit_profile_url') ) {
 						$item->url = pp_edit_profile_url();
 					} else {
 						$item->title = '#pp-editprofile#';
