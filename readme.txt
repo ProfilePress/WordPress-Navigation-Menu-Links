@@ -26,6 +26,13 @@ Plugin is open source on [GitHub](https://github.com/ProfilePress/WordPress-Navi
 
 This is a rewritten fork of [Login Logout Menu](https://wordpress.org/plugins/baw-login-logout-menu/) plugin with a better architected codebase.
 
+### Plugins you will like
+* **[OmniPay](https://omnipay.io)**: OmniPay is a payment gateway extension for WooCommerce and Easy Digital Downloads that bundles several payment providers such as Stripe, 2checkout, PayPal, Braintree, WePay, Authorize.Net together thus saving you money.
+You get over seven(7) payment extensions for the price of one saving you over 90% of cost.
+* **[Better WePay Payment Gateway for WooCommerce](https://omnipay.io/downloads/better-wepay-payment-gateway-for-woocommerce/)**: allows your WooCommerce powered store to accept credit card and bank account payment from shoppers via WePay.
+* **[Better 2Checkout Payment Gateway for WooCommerce](https://omnipay.io/downloads/better-2checkout-payment-gateway-for-woocommerce/)**: allows your WooCommerce powered store to accept credit card and PayPal payment from shoppers via 2Checkout.
+* **[2Checkout for Easy Digital Downloads](https://omnipay.io/downloads/2checkout-easy-digital-downloads/)**: accept credit card and PayPal payment in your Easy Digital Downloads powered store via 2Checkout.
+
 == Installation ==
 
 Installing this plugin is just like any other WordPress plugin.
