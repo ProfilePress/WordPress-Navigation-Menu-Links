@@ -40,14 +40,14 @@ class Frontend {
 
 			switch ( $item_url ) {
 				case '#pp-loginout#' :
-					$item->url   = is_user_logged_in() ? wp_logout_url() : pp_login_url();
+					$item->url   = is_user_logged_in() ? wp_logout_url() : wp_login_url();
 					$item->title = $this->loginout_title( $item->title );
 					break;
 				case '#pp-login#' :
 					if ( is_user_logged_in() ) {
 						$item->title = '#pp-login#';
 					} else {
-						$item->url = pp_login_url();
+						$item->url = wp_login_url();
 					}
 					apply_filters( 'pp_nav_login_item', $item );
 					break;
