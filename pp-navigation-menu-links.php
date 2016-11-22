@@ -21,12 +21,13 @@ include 'frontend.php';
 add_action('plugins_loaded', 'pp_nml_plugin_load_textdomain');
 function pp_nml_plugin_load_textdomain()
 {
-	load_plugin_textdomain('pp_nml', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('pp_nml', false, dirname(plugin_basename(__FILE__)) . '/languages');
 }
 
-add_action( 'plugins_loaded', 'ProfilePress\Nav_Menu_Links\load_plugin' );
+add_action('plugins_loaded', 'ProfilePress\Nav_Menu_Links\load_plugin');
 
-function load_plugin() {
-	Backend::get_instance();
-	Frontend::get_instance();
+function load_plugin()
+{
+    Backend::get_instance();
+    Frontend::get_instance();
 }
