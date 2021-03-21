@@ -3,7 +3,7 @@
 namespace ProfilePress\Nav_Menu_Links;
 
 
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
@@ -30,12 +30,74 @@ class Backend
 
     public function __construct()
     {
-
         /* Add a metabox in admin menu page */
         add_action('admin_head-nav-menus.php', array($this, 'add_nav_menu_metabox'));
 
         /* Modify the "type_label" */
         add_filter('wp_setup_nav_menu_item', array($this, 'nav_menu_type_label'));
+
+        add_filter('customize_nav_menu_available_item_types', array($this, 'register_customize_nav_menu_item_types'));
+        add_filter('customize_nav_menu_available_items', array($this, 'register_customize_nav_menu_items'), 10, 4);
+    }
+
+    public function link_elements()
+    {
+        return array(
+            '#pp-login#'       => __('Log In', 'wp-navigation-menu-links'),
+            '#pp-logout#'      => __('Log Out', 'wp-navigation-menu-links'),
+            '#pp-signup#'      => __('Sign Up', 'wp-navigation-menu-links'),
+            '#pp-editprofile#' => __('Edit Profile', 'wp-navigation-menu-links'),
+            '#pp-myprofile#'   => __('My Profile', 'wp-navigation-menu-links'),
+            '#pp-loginout#'    => __('Login', 'wp-navigation-menu-links') . ' | ' . __('Log Out', 'wp-navigation-menu-links'),
+        );
+    }
+
+    /**
+     * @param array $item_types Menu item types.
+     *
+     * @return array
+     */
+    public function register_customize_nav_menu_item_types($item_types)
+    {
+        $item_types[] = array(
+            'title'      => __('ProfilePress Links', 'woocommerce'),
+            'type_label' => __('ProfilePress Link', 'woocommerce'),
+            'type'       => 'ppnavmenu',
+            'object'     => 'ppnavmenu_links',
+        );
+
+        return $item_types;
+    }
+
+    /**
+     * @param array $items List of nav menu items.
+     * @param string $type Nav menu type.
+     * @param string $object Nav menu object.
+     * @param integer $page Page number.
+     *
+     * @return array
+     */
+    public function register_customize_nav_menu_items($items = array(), $type = '', $object = '', $page = 0)
+    {
+        if ('ppnavmenu_links' !== $object) {
+            return $items;
+        }
+
+        // Don't allow pagination since all items are loaded at once.
+        if (0 < $page) {
+            return $items;
+        }
+
+        foreach ($this->link_elements() as $id => $title) {
+            $items[] = array(
+                'id'         => str_replace('#', '', $id),
+                'title'      => $title,
+                'type_label' => __('ProfilePress Link', 'woocommerce'),
+                'url'        => $id,
+            );
+        }
+
+        return $items;
     }
 
 
@@ -48,22 +110,14 @@ class Backend
     {
         global $nav_menu_selected_id;
 
-        $elems = array(
-            '#pp-login#' => __('Log In', 'wp-navigation-menu-links'),
-            '#pp-logout#' => __('Log Out', 'wp-navigation-menu-links'),
-            '#pp-signup#' => __('Sign Up', 'wp-navigation-menu-links'),
-            '#pp-editprofile#' => __('Edit Profile', 'wp-navigation-menu-links'),
-            '#pp-myprofile#' => __('My Profile', 'wp-navigation-menu-links'),
-            '#pp-loginout#' => __('Login', 'wp-navigation-menu-links') . ' | ' . __('Log Out', 'wp-navigation-menu-links'),
-        );
-
+        $elems = $this->link_elements();
 
         $elems_obj = array();
         foreach ($elems as $value => $title) {
-            $elems_obj[$title] = new PP_Nav_Items();
+            $elems_obj[$title]            = new PP_Nav_Items();
             $elems_obj[$title]->object_id = esc_html($value);
-            $elems_obj[$title]->title = esc_html($title);
-            $elems_obj[$title]->url = esc_html($value);
+            $elems_obj[$title]->title     = esc_html($title);
+            $elems_obj[$title]->url       = esc_html($value);
         }
 
         $walker = new \Walker_Nav_Menu_Checklist(array());
@@ -108,7 +162,7 @@ class Backend
             'custom' == $menu_item->object &&
             in_array($menu_item->url, $elems)
         ) {
-            $menu_item->type_label = __('ProfilePress Links', 'wp-navigation-menu-links');
+            $menu_item->type_label = __('ProfilePress Link', 'wp-navigation-menu-links');
         }
 
         return $menu_item;

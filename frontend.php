@@ -31,11 +31,16 @@ class Frontend
             return esc_html(isset($titles[1]) ? $titles[1] : $title);
         }
     }
-    
+
     public function setup_nav_menu_item($item)
     {
         global $pagenow;
-        if ( ! is_customize_preview() && $pagenow != 'nav-menus.php' && ! defined('DOING_AJAX') && isset($item->url) && strstr($item->url, '#pp-') != ''
+
+        if (is_customize_preview() && ! (is_home() || is_front_page() || is_singular() || is_archive() || is_tax())) {
+            return $item;
+        }
+
+        if ($pagenow != 'nav-menus.php' && ! defined('DOING_AJAX') && isset($item->url) && strstr($item->url, '#pp-') != ''
         ) {
             $item_url = substr($item->url, 0, strpos($item->url, '#', 1)) . '#';
 

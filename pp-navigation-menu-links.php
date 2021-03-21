@@ -4,9 +4,9 @@
 Plugin Name: WordPress Navigation Menu Links
 Plugin URI: https://profilepress.net
 Description: Add ProfilePress login, registration, password reset, edit profile, my profile and logout links to WordPress navigation menu.
-Version: 1.0.6
-Author: Agbonghama Collins
-Author URI: http://w3guy.com
+Version: 1.0.7
+Author: ProfilePress
+Author URI: https://profilepress.net
 License: GPL2
 Text Domain: wp-navigation-menu-links
 Domain Path: /languages/

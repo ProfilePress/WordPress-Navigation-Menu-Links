@@ -27,7 +27,7 @@ Plugin is open source on [GitHub](https://github.com/ProfilePress/WordPress-Navi
 This is a rewritten fork of [Login Logout Menu](https://wordpress.org/plugins/baw-login-logout-menu/) plugin with a better architected codebase.
 
 ### Plugins you will like
-* **[MailOptin](https://wordpress.org/plugins/mailoptin/)**: OmniPay is a payment gateway extension for WooCommerce and Easy Digital Downloads that bundles several payment providers such as Stripe, 2checkout, PayPal, Braintree, WePay, Authorize.Net together thus saving you money.
+* **[MailOptin](https://wordpress.org/plugins/mailoptin/)**: A form builder for creating popups, subscribe forms, user registration forms and sending email newsletters.
 
 == Installation ==
 
@@ -49,7 +49,7 @@ Have any question, shoot us a mail via support[at]profilepress.net
 == Changelog ==
 
 = 1.0.7 =
-* Added support for upcoming ProfilePress v3
+* Added customizer menu support.
 * Improve compatibility with WP 5.7
 
 = 1.0.6 =
