@@ -1,10 +1,10 @@
-﻿=== Navigation Menu Links ===
+=== Navigation Menu Links ===
 Contributors: Collizo4sky
 Donate link: http://profilepress.net/pricing/
 Tags: log in, login, logout, menu, nonce, sign-up, sign up, register, registration, link, links, wordpress menu, menu, navigation, navigation menu, wordpress navigation menu
 Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 1.0.4
+Tested up to: 5.5
+Stable tag: 1.0.6
 License: GPL-2.0+
 
 Add login, registration, password reset, logout, login/logout links to WordPress menu.
@@ -51,6 +51,12 @@ Have any question, shoot us a mail via support[at]profilepress.net
 1. WordPress menu
 
 == Changelog ==
+
+= 1.0.6 =
+* Make admin notice dismiss button more obvious.
+
+= 1.0.5 =
+* Small fix and improvement.
 
 = 1.0.4 =
 * Improve compatibility with recent versions of WordPress
