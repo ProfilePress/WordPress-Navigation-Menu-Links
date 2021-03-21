@@ -8,7 +8,7 @@ Version: 1.0.6
 Author: Agbonghama Collins
 Author URI: http://w3guy.com
 License: GPL2
-Text Domain: pp_nml
+Text Domain: wp-navigation-menu-links
 Domain Path: /languages/
 */
 
@@ -24,7 +24,7 @@ add_action('plugins_loaded', 'ProfilePress\Nav_Menu_Links\load_plugin');
 
 function load_plugin()
 {
-    load_plugin_textdomain('pp_nml', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('wp-navigation-menu-links', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
     Backend::get_instance();
     Frontend::get_instance();

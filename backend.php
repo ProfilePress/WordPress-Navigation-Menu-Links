@@ -41,7 +41,7 @@ class Backend
 
     public function add_nav_menu_metabox()
     {
-        add_meta_box('ppnavmenu', __('ProfilePress Links', 'pp_nml'), array($this, 'nav_menu_metabox'), 'nav-menus', 'side', 'default');
+        add_meta_box('ppnavmenu', __('ProfilePress Links', 'wp-navigation-menu-links'), array($this, 'nav_menu_metabox'), 'nav-menus', 'side', 'default');
     }
 
     public function nav_menu_metabox($object)
@@ -49,12 +49,12 @@ class Backend
         global $nav_menu_selected_id;
 
         $elems = array(
-            '#pp-login#' => __('Log In', 'pp_nml'),
-            '#pp-logout#' => __('Log Out', 'pp_nml'),
-            '#pp-signup#' => __('Sign Up', 'pp_nml'),
-            '#pp-editprofile#' => __('Edit Profile', 'pp_nml'),
-            '#pp-myprofile#' => __('My Profile', 'pp_nml'),
-            '#pp-loginout#' => __('Login', 'pp_nml') . ' | ' . __('Log Out', 'pp_nml'),
+            '#pp-login#' => __('Log In', 'wp-navigation-menu-links'),
+            '#pp-logout#' => __('Log Out', 'wp-navigation-menu-links'),
+            '#pp-signup#' => __('Sign Up', 'wp-navigation-menu-links'),
+            '#pp-editprofile#' => __('Edit Profile', 'wp-navigation-menu-links'),
+            '#pp-myprofile#' => __('My Profile', 'wp-navigation-menu-links'),
+            '#pp-loginout#' => __('Login', 'wp-navigation-menu-links') . ' | ' . __('Log Out', 'wp-navigation-menu-links'),
         );
 
 
@@ -85,8 +85,7 @@ class Backend
 
                 <div id="help-login-links"><br/><br/>
                     <p><strong>Do not change the value of the "URL" field.</strong></p>
-                    <p><?php printf('Love this plugin? Check out <a href="%s" target="_blank">ProfilePress</a>, a shortcode based WordPress form builder that makes building custom login, registration, password reset forms stupidly simple with lots of other perks', 'https://profilepress.net/pricing/'); ?>
-                        .
+                    <p><?php printf('Love this plugin? Check out <a href="%s" target="_blank">ProfilePress</a>, a custom login, user registration, profile and membership plugin.', 'https://profilepress.net/pricing/?utm_source=wp_dashboard&utm_medium=wp-navigation-menu-links&utm_campaign=appearance-menu'); ?>
                     <p>
                 </div>
             </div>
@@ -109,7 +108,7 @@ class Backend
             'custom' == $menu_item->object &&
             in_array($menu_item->url, $elems)
         ) {
-            $menu_item->type_label = __('ProfilePress Links', 'pp_nml');
+            $menu_item->type_label = __('ProfilePress Links', 'wp-navigation-menu-links');
         }
 
         return $menu_item;
